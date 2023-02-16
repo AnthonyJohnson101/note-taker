@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express();
-const port = 3001;
+const PORT = process.env.PORT || 3001;
 
 const notes = require("./routes/notes.js")
 const api = require("./routes/apinotes.js")
@@ -15,34 +15,6 @@ app.get("/", (req, res ) => {
 
 app.use("/notes", notes)
 app.use("/api", api )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(port);
 
 
 
